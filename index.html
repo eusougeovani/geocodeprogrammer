@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEOCODE Programmer</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <button id="menu-toggle" aria-label="Abrir menu" aria-controls="side-menu" aria-expanded="false">
+            &#9776;
+        </button>
+        <span id="relogio"></span>
+        <h1>GEOCODE Programmer</h1>
+    </header>
+    <nav id="side-menu" class="side-menu">
+        <button id="close-menu" aria-label="Fechar menu">&times;</button>
+        <a href="#home">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#work">Trabalho</a>
+        <a href="#contact">Contato</a>
+    </nav>
+    <div class="container">
+        <section id="home">
+            <h1>Bem-vindo ao meu site!</h1>
+            <p>Sou Geovani Santos, um programador apaixonado por tecnologia e desenvolvimento web.</p>
+        </section>
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <p>Tenho experiência em diversas linguagens de programação e adoro aprender novas tecnologias.</p>
+        </section>
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+        </section>
+        <section id="work">
+            <h2>Trabalho</h2>
+            <div class="work-item">
+                <h3>Desenvolvedor Web</h3>
+                <p>Criação de sites responsivos e aplicativos web.</p>
+            </div>
+            <div class="work-item">
+                <h3>Programador Python</h3>
+                <p>Desenvolvimento de scripts e automações.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contato</h2>
+            <form onsubmit="sendMessage(event)">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+                <div id="msg"></div>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Geovani Santos. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://instagram.com/eusougeovani">Geovani Santos</a></p>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        // Menu lateral JS
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideMenu = document.getElementById('side-menu');
+        const closeMenu = document.getElementById('close-menu');
+        menuToggle.onclick = function () {
+            sideMenu.classList.add('open');
+            menuToggle.setAttribute('aria-expanded', 'true');
+        };
+        closeMenu.onclick = function () {
+            sideMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        };
+        // Fecha menu ao clicar fora (mobile UX)
+        document.addEventListener('click', function (e) {
+            if (
+                sideMenu.classList.contains('open') &&
+                !sideMenu.contains(e.target) &&
+                e.target !== menuToggle
+            ) {
+                sideMenu.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+
+</html>
