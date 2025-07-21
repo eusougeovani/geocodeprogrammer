@@ -39,3 +39,37 @@ document.querySelectorAll('.side-menu a[href^="#"]').forEach(link => {
         }
     });
 });
+
+// Carrossel de imagens
+const track = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.carousel-track a');
+const btnLeft = document.querySelector('.carousel-btn.left');
+const btnRight = document.querySelector('.carousel-btn.right');
+let currentSlide = 0;
+let carouselInterval;
+
+function showSlide(idx) {
+    if (!track) return;
+    currentSlide = (idx + slides.length) % slides.length;
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+function nextSlide() { showSlide(currentSlide + 1); }
+function prevSlide() { showSlide(currentSlide - 1); }
+
+if (btnLeft && btnRight) {
+    btnLeft.onclick = prevSlide;
+    btnRight.onclick = nextSlide;
+}
+
+function startCarousel() {
+    carouselInterval = setInterval(nextSlide, 4000);
+}
+function stopCarousel() {
+    clearInterval(carouselInterval);
+}
+if (track) {
+    track.onmouseenter = stopCarousel;
+    track.onmouseleave = startCarousel;
+    startCarousel();
+}
