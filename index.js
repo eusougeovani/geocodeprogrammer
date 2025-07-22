@@ -130,4 +130,4 @@ window.addEventListener('scroll', () => {
 });
 backToTopBtn.onclick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+};

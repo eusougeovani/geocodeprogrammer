@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursos | GEOCODE Programmer</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <button id="menu-toggle" aria-label="Abrir menu" aria-controls="side-menu" aria-expanded="false">&#9776;</button>
+        <h1 class="tech-title">GEOCODE Programmer</h1>
+        <div class="header-social">
+            <a href="https://wa.me/+5579988663905" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/geovanikeeper" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@eusougeovani" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://discord.gg/96WEpwWWG2" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+        </div>
+    </header>
+    <nav id="side-menu" class="side-menu">
+        <button id="close-menu" aria-label="Fechar menu">&times;</button>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre Mim</a>
+        <a href="cursos.html" class="active">Cursos</a>
+        <a href="portfolio.html">Portfólio</a>
+        <a href="blog.html">Blog/Artigos</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="depoimentos.html">Depoimentos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <div class="container">
+        <section id="cursos">
+            <h1>Cursos</h1>
+            <div class="cursos-grid">
+                <a href="adminfo.html" class="curso-card">
+                    <img src="curso-adm.jpg" alt="Administração Informatizada">
+                    <span>Administração Informatizada</span>
+                </a>
+                <a href="deppessoal.html" class="curso-card">
+                    <img src="curso-dp.jpg" alt="Departamento Pessoal">
+                    <span>Departamento Pessoal</span>
+                </a>
+                <a href="devweb.html" class="curso-card">
+                    <img src="curso-web.jpg" alt="Desenvolvimento Web">
+                    <span>Desenvolvimento Web</span>
+                </a>
+                <a href="designgr.html" class="curso-card">
+                    <img src="curso-design.jpg" alt="Design Gráfico">
+                    <span>Design Gráfico</span>
+                </a>
+                <a href="tecvendas.html" class="curso-card">
+                    <img src="curso-vendas.jpg" alt="Técnica de Vendas">
+                    <span>Técnica de Vendas</span>
+                </a>
+            </div>
+        </section>
+    </div>
+    <button id="backToTop" title="Voltar ao topo">&#8679;</button>
+    <footer>
+        <p>&copy; 2025 Geovani Santos. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://instagram.com/geovanikeeper">Geovani Santos</a></p>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+        // Menu lateral JS
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideMenu = document.getElementById('side-menu');
+        const closeMenu = document.getElementById('close-menu');
+        menuToggle.onclick = function () {
+            sideMenu.classList.add('open');
+            menuToggle.setAttribute('aria-expanded', 'true');
+        };
+        closeMenu.onclick = function () {
+            sideMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        };
+        // Fecha menu ao clicar fora (mobile UX)
+        document.addEventListener('click', function (e) {
+            if (
+                sideMenu.classList.contains('open') &&
+                !sideMenu.contains(e.target) &&
+                e.target !== menuToggle
+            ) {
+                sideMenu.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+</html>
