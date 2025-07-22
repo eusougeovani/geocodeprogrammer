@@ -1,170 +1,420 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background: #0a192f; /* azul escuro */
+    color: #e6f1ff;      /* azul claro quase branco */
+}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GEOCODE Programmer</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="index.css">
-</head>
+html {
+  scroll-padding-top: 80px; /* ajuste conforme a altura real do seu header */
+}
 
-<body>
-    <header>
-        <button id="menu-toggle" aria-label="Abrir menu" aria-controls="side-menu" aria-expanded="false">
-            &#9776;
-        </button>
-        <div class="site-title-logo">
-            <img src="logo.png" alt="Logo GEOCODE" class="logo-img">
-        </div>
-        <span id="relogio"></span>
-    </header>
-    <nav id="side-menu" class="side-menu">
-        <button id="close-menu" aria-label="Fechar menu">&times;</button>
-        <a href="#home">Home</a>
-        <a href="#about">Sobre</a>
-        <a href="#skills">Habilidades</a>
-        <a href="#work">Trabalho</a>
-        <a href="#contact">Contato</a>
-    </nav>
-    <div class="container">
-        <section id="home">
-            <div class="carousel">
-                <div class="carousel-track">
-                    <a href="https://link1.com" target="_blank"><img src="wp01.png" alt="Imagem 1"></a>
-                    <a href="https://link2.com" target="_blank"><img src="wp02.png" alt="Imagem 2"></a>
-                    <a href="https://link3.com" target="_blank"><img src="wp03.png" alt="Imagem 3"></a>
-                </div>
-                <button class="carousel-btn left" aria-label="Anterior">&#10094;</button>
-                <button class="carousel-btn right" aria-label="Próximo">&#10095;</button>
-            </div>
-            <h1>Bem-vindo ao Portal de Ensino</h1>
-            <div class="work-item">
-                <p>Seja bem-vindo ao seu espaço de aprendizado e desenvolvimento profissional. Este site foi criado com
-                    o objetivo de compartilhar conteúdos exclusivos e atualizados das disciplinas que ministro,
-                    proporcionando acesso prático, organizado e dinâmico aos principais temas abordados em sala de
-                    aula.<br><br>
-                    Aqui, você encontrará materiais completos dos seguintes cursos:<br><br>
-                <ul>
-                    <li><strong>Administração Informatizada:</strong> Aprenda a utilizar tecnologias e sistemas para
-                        otimizar processos administrativos e tornar sua atuação mais eficiente.</li>
-                    <li><strong>Departamento Pessoal:</strong> Tenha acesso às principais práticas, rotinas e
-                        legislações para atuar com segurança no setor de Recursos Humanos.</li>
-                    <li><strong>Desenvolvimento Web:</strong> Domine as ferramentas e técnicas essenciais para criar
-                        sites modernos, responsivos e funcionais.</li>
-                    <li><strong>Design Gráfico:</strong> Descubra os fundamentos do design visual, conceitos criativos e
-                        aplicações práticas para destacar suas ideias.</li>
-                    <li><strong>Técnica de Vendas:</strong> Aperfeiçoe suas habilidades de negociação, entendendo
-                        estratégias e técnicas que impulsionam resultados no mercado.</li>
-                </ul> <br><br>
-                O conteúdo foi planejado cuidadosamente para apoiar seu aprendizado contínuo, complementando as aulas
-                presenciais e facilitando o acesso ao conhecimento, onde e quando você precisar. Sinta-se à vontade para
-                explorar, tirar dúvidas e aproveitar ao máximo os recursos oferecidos.<br><br>
-                <strong>Bom estudo e sucesso em sua jornada!</strong>
-                </p>
-            </div>
-        </section>
-        <section id="about">
-            <h1>Sobre Mim</h1>
-            <div class="work-item">
-                <p>Olá! Meu nome é Geovani Santos, nasci em Salvador-BA e atualmente resido em Aracaju-SE. Sou uma
-                    pessoa alegre, divertida e agregadora, que acredita que o aprendizado pode – e deve – ser envolvente
-                    para todos. Por isso, busco criar aulas divertidas, interativas e adaptadas, de modo a engajar e
-                    motivar tanto alunos tímidos quanto os mais extrovertidos.<br><br>
-                    <strong>Formação Acadêmica</strong><br>
-                    Minha trajetória acadêmica reflete meu interesse por tecnologia e educação. Entre os principais
-                    momentos, destaco:<br>
-                    <ul>
-                        <li>Ensino Médio completo pelo Colégio Módulo Aracaju.</li>
-                        <li>Curso Técnico em Assistente Administrativo concluído pelo SENAI.</li>
-                        <li>Atualmente, curso Ciência da Computação na Universidade Federal de Sergipe (UFS).</li>
-                        <li>Participei de um mini-curso de programação em Python e Scratch, também pela UFS.</li>
-                        <li>Competidor em olimpíadas científicas nacionais, como ONHB, OBF, OBI e OSEQUIM, enriquecendo minha vivência acadêmica e ampliando minha visão multidisciplinar, com foco em Programação.</li>
-                    </ul>
-                    <strong>Experiência Profissional</strong><br>
-                    Atuo como professor particular há 4 anos, desenvolvendo aulas personalizadas que estimulam o aprendizado dinâmico e prático. Antes da educação, trabalhei como Assistente Administrativo na Primasa Engenharia, onde aprimorei competências organizacionais e de trabalho em equipe.<br><br>
-                    A maior satisfação da minha carreira tem sido o reconhecimento dos próprios alunos, que frequentemente elogiam minha maneira de ensinar e o ambiente leve criado em nossas aulas.<br><br>
-                    <strong>Metodologia de Ensino</strong><br>
-                    Acredito no poder do ensino divertido e descontraído. Meus diferenciais incluem:<br>
-                    <ul>
-                        <li>Aulas interativas, motivacionais e adaptativas ao perfil de cada estudante.</li>
-                        <li>Aplicação de princípios do método waldorfiano, priorizando o desenvolvimento integral dos alunos.</li>
-                        <li>Incentivo à participação, criatividade e autonomia.</li>
-                    </ul>
-                    <strong>Interesses e Inspiração</strong><br>
-                    Sou multiatleta, apaixonado por geografia, história e um grande conhecedor da cultura brasileira. Para mim, ser professor é uma das jornadas mais nobres: é gratificante ajudar pessoas a aprenderem, compreenderem e desenvolverem novos conhecimentos. Cada conquista dos meus alunos é, para mim, uma vitória que motiva meu trabalho e dedicação diários.<br><br>
-                    Sigo em constante evolução, buscando novas formas de tornar cada aula uma experiência transformadora e inesquecível.
-                </p>
-            </div>
-        </section>
-        <section id="skills">
-            <h1>Habilidades</h1>
-            <div class="work-item">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Python</li>
-                    <li>Java</li>
-                </ul>
-            </div>
-        </section>
-        <section id="work">
-            <h1>Trabalho</h1>
-            <div class="work-item">
-                <h3>Desenvolvedor Web</h3>
-                <p>Criação de sites responsivos e aplicativos web.</p>
-            </div>
-            <div class="work-item">
-                <h3>Programador Python</h3>
-                <p>Desenvolvimento de scripts e automações.</p>
-            </div>
-        </section>
-        <section id="contact">
-            <h1>Contato</h1>
-            <form onsubmit="sendMessage(event)">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-                <div id="msg"></div>
-            </form>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2025 Geovani Santos. Todos os direitos reservados.</p>
-        <p>Desenvolvido por <a href="https://instagram.com/eusougeovani">Geovani Santos</a></p>
-    </footer>
-    <script src="index.js"></script>
-    <script>
-        // Menu lateral JS
-        const menuToggle = document.getElementById('menu-toggle');
-        const sideMenu = document.getElementById('side-menu');
-        const closeMenu = document.getElementById('close-menu');
-        menuToggle.onclick = function () {
-            sideMenu.classList.add('open');
-            menuToggle.setAttribute('aria-expanded', 'true');
-        };
-        closeMenu.onclick = function () {
-            sideMenu.classList.remove('open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-        };
-        // Fecha menu ao clicar fora (mobile UX)
-        document.addEventListener('click', function (e) {
-            if (
-                sideMenu.classList.contains('open') &&
-                !sideMenu.contains(e.target) &&
-                e.target !== menuToggle
-            ) {
-                sideMenu.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-    </script>
-</body>
+/* Fonte futurista para o título */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
-</html>
+.tech-title {
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: #64ffda; /* azul vibrante */
+    margin: 0;
+    text-align: center;
+    flex: 1 1 auto;
+    white-space: nowrap;
+    text-shadow: 0 2px 8px #0a192f99;
+}
+
+header {
+    background-color: #112240; /* azul escuro médio */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+    padding: 0 16px;
+    gap: 0;
+    box-shadow: 0 2px 8px #0004;
+}
+
+.header-social {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    margin-left: 16px;
+}
+
+.header-social a {
+    color: #64ffda; /* azul vibrante */
+    font-size: 2.3rem; /* maior */
+    transition: color 0.2s, transform 0.2s;
+    filter: drop-shadow(0 2px 6px #0a192f88);
+}
+
+.header-social a:hover {
+    color: #1fa2ff; /* azul claro vibrante */
+    transform: scale(1.22);
+}
+
+#menu-toggle {
+    flex: 0 0 auto;
+    background: none;
+    border: none;
+    color: #64ffda;
+    font-size: 2.2rem;
+    margin-right: 16px;
+    cursor: pointer;
+    padding: 0 8px;
+    height: 48px;
+    width: 48px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.site-title-logo {
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+}
+
+.logo-img {
+    height: 70px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #0002;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+
+#relogio {
+    flex: 0 0 auto;
+    text-align: right;
+    font-size: 1.5rem;
+    margin-left: 16px;
+    color: #9ed1b7;
+    min-width: 140px;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .tech-title { font-size: 1.1rem; }
+    .header-social a { font-size: 1.5rem; }
+    header { height: auto; padding: 0.5em 0.2em; }
+}
+
+/* Menu lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 240px;
+    height: 100vh;
+    background: #112240;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-left: 0;
+    box-shadow: 2px 0 16px #0002;
+    z-index: 2000;
+    transition: left 0.3s;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu #close-menu {
+    background: none;
+    border: none;
+    color: #64ffda;
+    font-size: 2rem;
+    align-self: flex-end;
+    margin: 0 12px 16px 0;
+    cursor: pointer;
+    padding: 0 8px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.side-menu #close-menu:hover,
+.side-menu #close-menu:focus {
+    background: #1fa2ff22;
+    outline: none;
+}
+
+.side-menu a {
+    color: #e6f1ff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 24px;
+    border-radius: 0 24px 24px 0;
+    margin: 2px 0;
+    transition: background 0.2s, color 0.2s;
+    font-size: 1.1rem;
+}
+
+.side-menu a:hover,
+.side-menu a:focus {
+    background: #64ffda;
+    color: #0a192f;
+    outline: none;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 48px 0 32px 0;
+    min-height: 40vh;
+}
+
+section h1 {
+    margin-top: 0;
+    color: #1fa2ff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px #0a192f55;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+.work-item {
+    background: #112240;
+    padding: 16px;
+    margin: 14px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0003;
+    color: #e6f1ff;
+}
+
+form {
+    background: #112240;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0002;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    color: #64ffda;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    margin: 8px 0 18px 0;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #1fa2ff;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    background: #0a192f;
+    color: #e6f1ff;
+}
+
+form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+form button {
+    background: #64ffda;
+    color: #0a192f;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+form button:hover,
+form button:focus {
+    background: #1fa2ff;
+    color: #fff;
+}
+
+#msg {
+    margin-top: 10px;
+    color: #28a745;
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+footer {
+    background: #112240;
+    color: #e6f1ff;
+    text-align: center;
+    padding: 24px 10px 12px 10px;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #64ffda;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #1fa2ff;
+}
+
+/* Carrossel de imagens */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    max-height: 720px;
+    margin: 0 auto 32px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #0002;
+    background: #112240;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+    will-change: transform;
+}
+.carousel-track a {
+    min-width: 100%;
+    transition: filter 0.2s;
+    display: block;
+}
+.carousel-track img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #0a192fbb;
+    color: #64ffda;
+    border: none;
+    font-size: 2.2rem;
+    padding: 0 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    transition: background 0.2s, color 0.2s;
+    opacity: 0.8;
+}
+.carousel-btn.left { left: 10px; }
+.carousel-btn.right { right: 10px; }
+.carousel-btn:hover { background: #64ffda; color: #0a192f; opacity: 1; }
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+.carousel-indicators .dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #1fa2ff;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: opacity 0.2s, background 0.2s;
+    border: 2px solid #64ffda;
+}
+.carousel-indicators .dot.active {
+    opacity: 1;
+    background: #64ffda;
+    border-color: #1fa2ff;
+}
+
+@media (max-width: 700px) {
+    .carousel { max-width: 98vw; }
+    .carousel-track img { height: 140px; }
+    .header-social a { font-size: 1.5rem; }
+    .tech-title { font-size: 1.1rem; }
+    header { height: auto; padding: 0.5em 0.2em; }
+}
+
+/* Botão voltar ao topo */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 2000;
+    background: #64ffda;
+    color: #0a192f;
+    border: none;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    font-size: 2.3rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #092b5a;
+    transition: opacity 0.3s, background 0.2s, color 0.2s;
+    opacity: 0.85;
+}
+#backToTop.show { display: block; }
+#backToTop:hover { background: #1fa2ff; color: #fff; opacity: 1; }
+
+.main-sections {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.main-sections > section {
+    flex: 1 1 0;
+    min-width: 320px;
+    max-width: 600px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+/* Responsivo: empilha no mobile */
+@media (max-width: 1100px) {
+    .main-sections {
+        flex-direction: column;
+        gap: 0;
+    }
+    .main-sections > section {
+        max-width: 100%;
+    }
+}
