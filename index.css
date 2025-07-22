@@ -377,7 +377,7 @@ footer a:hover {
     position: fixed;
     bottom: 32px;
     right: 32px;
-    z-index: 2000;
+    z-index: 9999; /* aumente o z-index */
     background: #64ffda;
     color: #0a192f;
     border: none;
@@ -398,6 +398,7 @@ footer a:hover {
     gap: 32px;
     align-items: flex-start;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .main-sections > section {
@@ -417,4 +418,8 @@ footer a:hover {
     .main-sections > section {
         max-width: 100%;
     }
+}
+
+.carousel {
+    max-width: 100%;
 }
