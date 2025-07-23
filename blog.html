@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato | GEOCODE Programmer</title>
+    <title>Blog | GEOCODE Programmer</title>
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
     <header>
         <button id="menu-toggle" aria-label="Abrir menu" aria-controls="side-menu"
@@ -31,42 +29,43 @@
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre Mim</a>
         <a href="cursos.html">Cursos</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="blog.html">Blog/Artigos</a>
+        <a href="blog.html" class="active">Blog/Artigos</a>
         <a href="agenda.html">Agenda</a>
         <a href="depoimentos.html">Depoimentos</a>
         <a href="faq.html">FAQ</a>
-        <a href="contato.html" class="active">Contato</a>
+        <a href="contato.html">Contato</a>
     </nav>
     <div class="container">
-        <section id="contact">
-            <h1>Entre em Contato</h1>
-            <div class="work-item">
-                <p>Fique à vontade para entrar em contato comigo através do formulário abaixo ou pelas redes sociais:
-                </p>
-                <div class="contact-social">
-                    <a href="mailto:adm.geovanisantos@gmail.com" target="_blank" aria-label="E-mail"><i
-                            class="fas fa-envelope"></i> E-mail</a>
-                    <a href="https://wa.me/+5579988663905" target="_blank" aria-label="WhatsApp"><i
-                            class="fab fa-whatsapp"></i> WhatsApp</a>
-                    <a href="https://instagram.com/geovanikeeper" target="_blank" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i> Instagram</a>
-                    <a href="https://www.youtube.com/@eusougeovani" target="_blank" aria-label="YouTube"><i
-                            class="fab fa-youtube"></i> YouTube</a>
-                    <a href="https://discord.gg/96WEpwWWG2" target="_blank" aria-label="Discord"><i
-                            class="fab fa-discord"></i> Discord</a>
-                </div>
+        <section id="blog">
+            <h1>Blog</h1>
+            <div class="blog-list">
+                <!-- Exemplo de post -->
+                <article class="blog-post">
+                    <h2 class="blog-title"><a href="post1.html">Como Aprender Programação do Zero</a></h2>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-user"></i> Geovani Santos</span>
+                        <span><i class="fas fa-calendar-alt"></i> 23/07/2025</span>
+                        <span><i class="fas fa-tag"></i> Dicas, Programação</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        Descubra os melhores caminhos para iniciar sua jornada na programação, com dicas práticas e recursos gratuitos para todos os níveis.
+                    </p>
+                    <a href="post1.html" class="blog-readmore">Leia mais</a>
+                </article>
+                <article class="blog-post">
+                    <h2 class="blog-title"><a href="post2.html">O que é HTML, CSS e JavaScript?</a></h2>
+                    <div class="blog-meta">
+                        <span><i class="fas fa-user"></i> Geovani Santos</span>
+                        <span><i class="fas fa-calendar-alt"></i> 20/07/2025</span>
+                        <span><i class="fas fa-tag"></i> Web, Frontend</span>
+                    </div>
+                    <p class="blog-excerpt">
+                        Entenda os fundamentos das principais tecnologias para desenvolvimento web e como elas se conectam para criar sites modernos.
+                    </p>
+                    <a href="post2.html" class="blog-readmore">Leia mais</a>
+                </article>
+                <!-- Adicione mais artigos conforme necessário -->
             </div>
-            <form onsubmit="sendMessage(event)">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-                <div id="msg"></div>
-            </form>
         </section>
     </div>
     <footer>
@@ -75,7 +74,7 @@
     </footer>
     <script src="index.js"></script>
     <script>
-    // Menu lateral independente e responsivo
+    // Menu lateral independente
     document.addEventListener('DOMContentLoaded', function () {
         var menuToggle = document.getElementById('menu-toggle');
         var sideMenu = document.getElementById('side-menu');
@@ -103,5 +102,4 @@
     });
     </script>
 </body>
-
 </html>

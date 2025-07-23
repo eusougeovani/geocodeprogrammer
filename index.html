@@ -23,7 +23,8 @@
                     class="fab fa-instagram"></i></a>
             <a href="https://www.youtube.com/@eusougeovani" target="_blank" aria-label="YouTube"><i
                     class="fab fa-youtube"></i></a>
-            <a href="https://discord.gg/96WEpwWWG2" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            <a href="https://discord.gg/96WEpwWWG2" target="_blank" aria-label="Discord"><i
+                    class="fab fa-discord"></i></a>
         </div>
     </header>
     <nav id="side-menu" class="side-menu">
@@ -53,61 +54,61 @@
         <section id="home">
             <h1>Bem-vindo ao Portal de Ensino</h1>
             <div class="work-item">
-                <p>Seja bem-vindo ao seu espaço de aprendizado e desenvolvimento profissional. Este site foi criado
+                <p>
+                    Seja bem-vindo ao seu espaço de aprendizado e desenvolvimento profissional. Este site foi criado
                     com o objetivo de compartilhar conteúdos exclusivos e atualizados das disciplinas que ministro,
-                    proporcionando acesso prático, organizado e dinâmico aos principais temas abordados em sala de aula.<br><br>
-                    Aqui, você encontrará materiais completos dos seguintes cursos:<br><br>
+                    proporcionando acesso prático, organizado e dinâmico aos principais temas abordados em sala de aula.
+                    <br><br>
+                    Aqui, você encontrará materiais completos dos seguintes cursos:
+                </p>
                 <ul>
-                    <li><strong>Administração Informatizada:</strong> Aprenda a utilizar tecnologias e sistemas para otimizar processos administrativos e 
-                        tornar sua atuação mais eficiente.</li>
-                    <li><strong>Departamento Pessoal:</strong> Tenha acesso às principais práticas, rotinas e legislações para atuar com segurança no setor 
-                        de Recursos Humanos.</li>
-                    <li><strong>Desenvolvimento Web:</strong> Domine as ferramentas e técnicas essenciais para criar sites modernos, 
-                        responsivos e funcionais.</li>
-                    <li><strong>Design Gráfico:</strong> Descubra os fundamentos do design visual, conceitos criativos e aplicações práticas para destacar suas 
-                        ideias.</li>
-                    <li><strong>Técnica de Vendas:</strong> Aperfeiçoe suas habilidades de negociação, entendendo estratégias e técnicas que impulsionam 
-                        resultados no mercado.</li>
-                </ul> <br><br>
-                O conteúdo foi planejado cuidadosamente para apoiar seu aprendizado contínuo, complementando as aulas presenciais e facilitando o acesso ao 
-                conhecimento, onde e quando você precisar. Sinta-se à vontade para explorar, tirar dúvidas e aproveitar ao máximo os 
-                recursos oferecidos.<br><br>
-                <strong>Bom estudo e sucesso em sua jornada!</strong>
+                    <li><strong>Administração Informatizada:</strong> Aprenda a utilizar tecnologias e sistemas para otimizar processos administrativos e tornar sua atuação mais eficiente.</li>
+                    <li><strong>Departamento Pessoal:</strong> Tenha acesso às principais práticas, rotinas e legislações para atuar com segurança no setor de Recursos Humanos.</li>
+                    <li><strong>Desenvolvimento Web:</strong> Domine as ferramentas e técnicas essenciais para criar sites modernos, responsivos e funcionais.</li>
+                    <li><strong>Design Gráfico:</strong> Descubra os fundamentos do design visual, conceitos criativos e aplicações práticas para destacar suas ideias.</li>
+                    <li><strong>Técnica de Vendas:</strong> Aperfeiçoe suas habilidades de negociação, entendendo estratégias e técnicas que impulsionam resultados no mercado.</li>
+                </ul>
+                <br>
+                <p>
+                    O conteúdo foi planejado cuidadosamente para apoiar seu aprendizado contínuo, complementando as aulas presenciais e facilitando o acesso ao conhecimento, onde e quando você precisar. Sinta-se à vontade para explorar, tirar dúvidas e aproveitar ao máximo os recursos oferecidos.
+                    <br><br>
+                    <strong>Bom estudo e sucesso em sua jornada!</strong>
                 </p>
             </div>
         </section>
-        <!-- Removidas as sections skills, work e contact -->
     </div>
-    <button id="backToTop" title="Voltar ao topo">&#8679;</button>
     <footer>
         <p>&copy; 2025 Geovani Santos. Todos os direitos reservados.</p>
         <p>Desenvolvido por <a href="https://instagram.com/geovanikeeper">Geovani Santos</a></p>
     </footer>
     <script src="index.js"></script>
     <script>
-        // Menu lateral JS
-        const menuToggle = document.getElementById('menu-toggle');
-        const sideMenu = document.getElementById('side-menu');
-        const closeMenu = document.getElementById('close-menu');
-        menuToggle.onclick = function () {
-            sideMenu.classList.add('open');
-            menuToggle.setAttribute('aria-expanded', 'true');
-        };
-        closeMenu.onclick = function () {
-            sideMenu.classList.remove('open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-        };
-        // Fecha menu ao clicar fora (mobile UX)
-        document.addEventListener('click', function (e) {
-            if (
-                sideMenu.classList.contains('open') &&
-                !sideMenu.contains(e.target) &&
-                e.target !== menuToggle
-            ) {
+    // Menu lateral independente e responsivo
+    document.addEventListener('DOMContentLoaded', function () {
+        var menuToggle = document.getElementById('menu-toggle');
+        var sideMenu = document.getElementById('side-menu');
+        var closeMenu = document.getElementById('close-menu');
+        if (menuToggle && sideMenu && closeMenu) {
+            menuToggle.onclick = function () {
+                sideMenu.classList.add('open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            };
+            closeMenu.onclick = function () {
                 sideMenu.classList.remove('open');
                 menuToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
+            };
+            document.addEventListener('click', function (e) {
+                if (
+                    sideMenu.classList.contains('open') &&
+                    !sideMenu.contains(e.target) &&
+                    e.target !== menuToggle
+                ) {
+                    sideMenu.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    });
     </script>
 </body>
 
