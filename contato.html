@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cursos | GEOCODE Programmer</title>
+    <title>Contato | GEOCODE Programmer</title>
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -23,38 +23,37 @@
         <button id="close-menu" aria-label="Fechar menu">&times;</button>
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre Mim</a>
-        <a href="cursos.html" class="active">Cursos</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="portfolio.html">Portfólio</a>
         <a href="blog.html">Blog/Artigos</a>
         <a href="agenda.html">Agenda</a>
         <a href="depoimentos.html">Depoimentos</a>
         <a href="faq.html">FAQ</a>
-        <a href="contato.html">Contato</a>
+        <a href="contato.html" class="active">Contato</a>
     </nav>
     <div class="container">
-        <section id="cursos">
-            <h1>Cursos</h1>
-            <div class="cursos-grid">
-                <a href="adminfo.html" class="curso-card">
-                    <img src="curso1.png" alt="Administração Informatizada">
-                    <span>Administração Informatizada</span>
-                </a>
-                <a href="deppessoal.html" class="curso-card">
-                    <img src="curso2.jpg" alt="Departamento Pessoal">
-                    <span>Departamento Pessoal</span>
-                </a>
-                <a href="devweb.html" class="curso-card">
-                    <img src="curso3.png" alt="Desenvolvimento Web">
-                    <span>Desenvolvimento Web</span>
-                </a>
-                <a href="designgr.html" class="curso-card">
-                    <img src="curso4.jpg" alt="Design Gráfico">
-                    <span>Design Gráfico</span>
-                </a>
-                <a href="tecvendas.html" class="curso-card">
-                    <img src="curso5.png" alt="Técnica de Vendas">
-                    <span>Técnica de Vendas</span>
-                </a>
+        <section id="contact">
+            <h1>Entre em Contato</h1>
+            <div class="work-item">
+                <p>Fique à vontade para entrar em contato comigo através do formulário abaixo ou pelas redes sociais:</p>
+                <div class="contact-social">
+                    <a href="mailto:adm.geovanisantos@gmail.com" target="_blank" aria-label="E-mail"><i class="fas fa-envelope"></i> E-mail</a>
+                    <a href="https://wa.me/+5579988663905" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://instagram.com/geovanikeeper" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="https://www.youtube.com/@eusougeovani" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="https://discord.gg/96WEpwWWG2" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i> Discord</a>
+                </div>
             </div>
+            <form onsubmit="sendMessage(event)">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+                <div id="msg"></div>
+            </form>
         </section>
     </div>
     <button id="backToTop" title="Voltar ao topo">&#8679;</button>

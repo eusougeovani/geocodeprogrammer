@@ -41,16 +41,15 @@ document.querySelectorAll('.side-menu a[href^="#"]').forEach(link => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Carrossel de imagens
+    // Novo carrossel
     const track = document.querySelector('.carousel-track');
     const btnLeft = document.querySelector('.carousel-btn.left');
     const btnRight = document.querySelector('.carousel-btn.right');
     const indicatorsContainer = document.querySelector('.carousel-indicators');
-    let slides = Array.from(document.querySelectorAll('.carousel-track a'));
+    let slides = Array.from(track.querySelectorAll('a'));
     let currentSlide = 0;
     let carouselInterval;
 
-    // Cria os indicadores (bolinhas)
     function createIndicators() {
         indicatorsContainer.innerHTML = '';
         slides.forEach((_, idx) => {
@@ -94,26 +93,22 @@ document.addEventListener('DOMContentLoaded', function () {
         startCarousel();
     }
 
-    // Eventos dos botões
     if (btnLeft) btnLeft.onclick = () => { prevSlide(); restartCarousel(); };
     if (btnRight) btnRight.onclick = () => { nextSlide(); restartCarousel(); };
 
-    // Pausa ao passar mouse
     if (track) {
         track.addEventListener('mouseenter', stopCarousel);
         track.addEventListener('mouseleave', startCarousel);
     }
 
-    // Inicialização
     if (slides.length > 0) {
         createIndicators();
         showSlide(0);
         startCarousel();
     }
 
-    // Atualiza slides caso o DOM mude (opcional)
     window.addEventListener('resize', () => {
-        slides = Array.from(document.querySelectorAll('.carousel-track a'));
+        slides = Array.from(track.querySelectorAll('a'));
         createIndicators();
         showSlide(currentSlide);
     });
