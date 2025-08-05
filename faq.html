@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ | GEOCODE Programmer</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <button id="menu-toggle" aria-label="Abrir menu" aria-controls="side-menu" aria-expanded="false">
+            &#9776;
+        </button>
+        <h1 class="tech-title">Perguntas Frequentes (FAQ)</h1>
+        <div class="header-social">
+            <a href="https://wa.me/+5579988663905" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/geovanikeeper" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@eusougeovani" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://discord.gg/96WEpwWWG2" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+        </div>
+    </header>
+    <nav id="side-menu" class="side-menu">
+        <button id="close-menu" aria-label="Fechar menu">&times;</button>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre Mim</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="blog.html">Blog/Artigos</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="depoimentos.html">Depoimentos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <div class="container">
+        <section>
+            <div class="faq-container">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Como faço para acessar os materiais das aulas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Os materiais estão disponíveis em cada página de curso. Basta acessar o menu, escolher o curso desejado e clicar nos links dos slides ou apostilas.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Preciso de senha para acessar os conteúdos?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Não, todo o conteúdo disponível no portal é de livre acesso para os alunos das turmas. Caso algum material exija senha, ela será informada em sala de aula.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Como entro em contato com o professor?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Você pode utilizar o formulário de contato do site ou enviar mensagem diretamente pelo WhatsApp, Instagram ou Discord, cujos links estão no topo do site.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Posso baixar os slides das aulas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Sim! Todos os slides estão disponíveis para download em PDF. Basta clicar no link do slide desejado.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Como faço para sugerir temas ou tirar dúvidas?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Utilize o formulário de contato ou envie sua sugestão/dúvida diretamente pelas redes sociais do professor.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Geovani Santos. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://instagram.com/geovanikeeper">Geovani Santos</a></p>
+    </footer>
+    <script src="index.js"></script>
+    <script>
+    // Menu lateral independente e responsivo
+    document.addEventListener('DOMContentLoaded', function () {
+        var menuToggle = document.getElementById('menu-toggle');
+        var sideMenu = document.getElementById('side-menu');
+        var closeMenu = document.getElementById('close-menu');
+        if (menuToggle && sideMenu && closeMenu) {
+            menuToggle.onclick = function () {
+                sideMenu.classList.add('open');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            };
+            closeMenu.onclick = function () {
+                sideMenu.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            };
+            document.addEventListener('click', function (e) {
+                if (
+                    sideMenu.classList.contains('open') &&
+                    !sideMenu.contains(e.target) &&
+                    e.target !== menuToggle
+                ) {
+                    sideMenu.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                // Fecha todos
+                document.querySelectorAll('.faq-question').forEach(b => {
+                    b.setAttribute('aria-expanded', 'false');
+                    b.parentElement.querySelector('.faq-answer').style.maxHeight = null;
+                    b.parentElement.querySelector('.faq-answer').classList.remove('open');
+                    b.querySelector('i').classList.remove('fa-chevron-up');
+                    b.querySelector('i').classList.add('fa-chevron-down');
+                });
+                // Abre o clicado se estava fechado
+                if (!expanded) {
+                    this.setAttribute('aria-expanded', 'true');
+                    const answer = this.parentElement.querySelector('.faq-answer');
+                    answer.classList.add('open');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    this.querySelector('i').classList.remove('fa-chevron-down');
+                    this.querySelector('i').classList.add('fa-chevron-up');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+
+</html>

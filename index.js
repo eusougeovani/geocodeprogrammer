@@ -67,3 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
         showSlide(currentSlide);
     });
 });
+
+// Função global para mostrar/ocultar senha
+window.mostrarSenhaFunc = function() {
+    var senhaInput = document.getElementById("senha");
+    if (senhaInput) {
+        senhaInput.type = senhaInput.type === "password" ? "text" : "password";
+    }
+};
