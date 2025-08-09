@@ -26,7 +26,7 @@ html {
 
 header {
     background-color: #112240;
-    color: #fff;
+    color: #e6f1ff;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,25 +37,6 @@ header {
     padding: 0 16px;
     gap: 0;
     box-shadow: 0 2px 8px #0004;
-}
-
-.header-social {
-    display: flex;
-    gap: 22px;
-    align-items: center;
-    margin-left: 16px;
-}
-
-.header-social a {
-    color: #64ffda;
-    font-size: 2.3rem;
-    transition: color 0.2s, transform 0.2s;
-    filter: drop-shadow(0 2px 6px #0a192f88);
-}
-
-.header-social a:hover {
-    color: #1fa2ff;
-    transform: scale(1.22);
 }
 
 #menu-toggle {
@@ -97,18 +78,8 @@ header h1 {
     letter-spacing: 1px;
     text-align: center;
     font-weight: bold;
-    color: #fff;
+    color: #e6f1ff;
     white-space: nowrap;
-}
-
-#relogio {
-    flex: 0 0 auto;
-    text-align: right;
-    font-size: 1.5rem;
-    margin-left: 16px;
-    color: #9ed1b7;
-    min-width: 140px;
-    font-weight: bold;
 }
 
 @media (max-width: 700px) {
@@ -133,7 +104,7 @@ header h1 {
     width: 240px;
     height: 100vh;
     background: #112240;
-    color: #fff;
+    color: #e6f1ff;
     display: flex;
     flex-direction: column;
     padding-top: 24px;
@@ -270,7 +241,7 @@ form button {
 form button:hover,
 form button:focus {
     background: #1fa2ff;
-    color: #fff;
+    color: #e6f1ff;
 }
 
 #msg {
@@ -560,7 +531,7 @@ footer a:hover {
 
 .curso-card:hover span,
 .curso-card:focus span {
-    color: #fff;
+    color: #e6f1ff;
 }
 
 @media (max-width: 900px) {
@@ -704,7 +675,7 @@ footer a:hover {
 .contact-social a:hover,
 .contact-social a:focus {
     background: #1fa2ff;
-    color: #fff;
+    color: #e6f1ff;
     transform: scale(1.05);
 }
 
@@ -770,7 +741,7 @@ footer a:hover {
 .blog-readmore:hover,
 .blog-readmore:focus {
     background: #1fa2ff;
-    color: #fff;
+    color: #e6f1ff;
 }
 
 /* --- Responsividade geral --- */
@@ -1111,7 +1082,6 @@ ol {
     display: flex;
     justify-content: center;
     gap: 22px;
-    margin: 24px 0 0 0;
 }
 
 .auth-btn {
@@ -1314,4 +1284,89 @@ main {
     width: 100vw;
     box-sizing: border-box;
     padding: 0;
+}
+
+/* Hotzone para facilitar o hover */
+.social-sidebar-hotzone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100vh;
+  z-index: 999;
+  pointer-events: auto;
+}
+
+/* Sidebar escondida e animada */
+.social-sidebar {
+  position: fixed;
+  top: 50%;
+  left: -48px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #1fa2ff;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 1000;
+  transition: left 0.3s;
+  box-shadow: 2px 0 12px #1fa2ff;
+}
+
+.social-sidebar-hotzone:hover + .social-sidebar,
+.social-sidebar:hover {
+  left: 0;
+}
+
+.social-sidebar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  border-radius: 50%;
+  padding: 6px;
+  text-decoration: none;
+}
+
+.social-sidebar a:hover {
+  transform: scale(2);
+  background-color: #f8f7f4;
+}
+
+.social-sidebar a:focus,
+.socio:focus,
+select:focus,
+.social-sidebar a:focus {
+  outline: 2px solid #1fa2ff;
+  outline-offset: 2px;
+}
+
+.social-sidebar img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+.social-sidebar-hotzone {
+    width: 40px;
+  }
+  .social-sidebar {
+    left: -36px;
+    padding: 6px;
+  }
+  .social-sidebar img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Social sidebar: oculta em telas menores */
+@media (max-width: 900px) {
+  .social-sidebar,
+  .social-sidebar-hotzone {
+    display: none !important;
+  }
 }
