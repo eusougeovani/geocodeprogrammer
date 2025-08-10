@@ -37,9 +37,8 @@
     </nav>
     <main>
         <div class="wrapper">
-            <img src="logo.png" alt="Logo do Site" class="logo">
             <form action="login.php" method="POST" autocomplete="on">
-                <h1>Login | GEOCODE</h1>
+                <h1>Login</h1>
                 <div class="input-box">
                     <input type="text" name="usuario" placeholder="Nome de Usuário" required autocomplete="username">
                     <i class="fa fa-user"></i>
@@ -52,14 +51,13 @@
                     <label for="mostrarSenha">
                         <input type="checkbox" id="mostrarSenha"onclick="mostrarSenhaFunc()"> Mostrar senha
                     </label>
-                </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox" name="lembrar"> Lembrar-me</label>
-                    <a href="#">Esqueci minha senha</a>
+                    <label>
+                        <input type="checkbox" id="rememberMe"> Lembrar-me
+                    </label>
                 </div>
                 <button type="submit" class="btn">Entrar</button>
                 <div class="register-link">
-                    <p>Não tem uma conta? <a href="#">Registrar</a></p>
+                    <p>Não tem uma conta ou esqueceu a senha?<br><br><a href="https://wa.me/5579988663905?text=Quero%20criar%20uma%20_conta%2Fnova%20senha_%20no%20site%20*GeoCODE*.">(CLIQUE AQUI)</a></p>
                 </div>
             </form>
         </div>

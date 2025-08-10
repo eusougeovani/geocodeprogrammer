@@ -571,20 +571,21 @@ footer a:hover {
 .agenda-page-center {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
+    align-items: center;     /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+    min-height: 100vh;       /* ocupa altura total da tela */
     width: 100vw;
     box-sizing: border-box;
     padding: 0;
 }
 
 #agenda {
-    width: 100%;
+    width: auto; /* evita esticar desnecessariamente */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px; /* espaçamento entre título e tabela */
 }
 
 .agenda-center-wrapper {
@@ -592,23 +593,30 @@ footer a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    overflow-x: auto;
     padding: 0;
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
+    overflow-x: auto;
 }
 
 .agenda-table {
-    margin-left: auto;
-    margin-right: auto;
-    display: table;
-    table-layout: auto;
+    margin: 0 auto;
     border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 85%; /* mais larga */
+    max-width: 1100px; /* não estoura demais em telas grandes */
+    font-size: 1.2rem;
+    border: 2px solid rgba(0, 255, 255, 0.4); /* borda externa suave */
+    border-radius: 8px;
+    overflow: hidden; /* arredondamento */
 }
 
 .agenda-table thead {
-    display: table-header-group;
-    text-align: center;
+    background-color: rgba(0, 255, 255, 0.2);
+    color: #00ffff;
+    font-size: 1.3rem;
+    padding: 18px 24px;
+    border-bottom: 2px solid rgba(0, 255, 255, 0.4);
 }
 
 .agenda-table tr {
@@ -616,15 +624,27 @@ footer a:hover {
     vertical-align: middle;
 }
 
-.agenda-table th {
-    text-align: center !important;
+.agenda-table td {
+    text-align: center;
     vertical-align: middle;
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .agenda-table th,
 .agenda-table td {
     text-align: center;
     vertical-align: middle;
+    padding: 16px 24px;
+}
+
+.agenda-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.agenda-table tbody tr:hover {
+    background-color: rgba(0, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 @media (max-width: 800px) {
@@ -1131,7 +1151,6 @@ ol {
     padding: 20px 30px;
     max-width: 95vw;
     min-width: 250px;
-    box-sizing: border-box;
 }
 
 .wrapper h1 {
@@ -1157,7 +1176,6 @@ ol {
     font-size: 16px;
     color: #fff;
     padding: 20px 45px 20px 20px;
-    box-sizing: border-box;
 }
 
 .input-box input::placeholder {
@@ -1170,35 +1188,25 @@ ol {
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: #64ffda;
-    pointer-events: none;
 }
 
-.wrapper .show-password {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 14px;
-    margin: -15px 0 15px;
+.wrapper .show-password{
+  display: flex;
+  align-items: center;      /* alinha verticalmente */
+  gap: 50px;                /* espaço entre os dois itens */
+  flex-wrap: nowrap;        /* impede quebra de linha */
+  justify-content: center;  /* centraliza no container */
 }
 
-.wrapper .remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    margin: -15px 0 15px;
-    flex-wrap: wrap;
-    gap: 8px;
+.show-password label{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;                 /* espaço entre checkbox e texto */
+  white-space: nowrap;
 }
 
-.remember-forgot label input {
+.show-password label input{
     accent-color: #fff;
-    margin-right: 3px;
-}
-
-.remember-forgot a {
-    color: #fff;
-    text-decoration: none;
-    word-break: break-all;
 }
 
 .wrapper .btn {
@@ -1213,7 +1221,6 @@ ol {
     font-size: 16px;
     color: #333;
     font-weight: 600;
-    margin-top: 10px;
 }
 
 .wrapper .register-link {
@@ -1232,6 +1239,7 @@ ol {
     text-decoration: underline;
 }
 
+
 /* Responsividade para login */
 @media (max-width: 900px) {
     .wrapper {
@@ -1249,30 +1257,39 @@ ol {
 }
 
 @media (max-width: 600px) {
+    body {
+        padding-bottom: 110px;
+    }
     .wrapper {
         width: 98vw;
         min-width: unset;
         padding: 10px 2vw;
-        margin-top: 10vw;
+        margin-top: 10px;
+        border-radius: 10px;
     }
     .wrapper h1 {
         font-size: 1.1em;
     }
     .input-box input {
         font-size: 14px;
-        padding: 12px 38px 12px 12px;
+        padding: 12px 36px 12px 12px;
     }
-    .input-box i {
-        font-size: 17px;
-        right: 12px;
-    }
-    .wrapper .btn {
+    .btn {
         font-size: 15px;
         height: 40px;
     }
-    .wrapper .register-link {
+    .register-link {
         font-size: 13px;
     }
+    footer {
+        font-size: 0.8em;
+        padding: 12px 2vw 6px 2vw;
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+@media (max-width: 420px) {
+  .show-password label { white-space: normal; }
 }
 
 /* Centraliza o wrapper na tela em telas pequenas */

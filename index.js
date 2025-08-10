@@ -69,9 +69,41 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Função global para mostrar/ocultar senha
-window.mostrarSenhaFunc = function() {
+window.mostrarSenhaFunc = function () {
     var senhaInput = document.getElementById("senha");
     if (senhaInput) {
         senhaInput.type = senhaInput.type === "password" ? "text" : "password";
     }
 };
+
+const usernameInput = document.getElementById("username");
+const rememberMeCheckbox = document.getElementById("rememberMe");
+
+// Ao carregar a página, verifica se há usuário salvo
+window.addEventListener("DOMContentLoaded", () => {
+    const savedUsername = localStorage.getItem("savedUsername");
+    const rememberMe = localStorage.getItem("rememberMe") === "true";
+
+    if (rememberMe && savedUsername) {
+        usernameInput.value = savedUsername;
+        rememberMeCheckbox.checked = true;
+    }
+});
+
+// Quando o checkbox ou o campo de usuário mudarem
+rememberMeCheckbox.addEventListener("change", () => {
+    if (rememberMeCheckbox.checked) {
+        localStorage.setItem("savedUsername", usernameInput.value);
+        localStorage.setItem("rememberMe", true);
+    } else {
+        localStorage.removeItem("savedUsername");
+        localStorage.setItem("rememberMe", false);
+    }
+});
+
+// Atualiza o nome salvo ao digitar, se "lembrar-me" estiver ativo
+usernameInput.addEventListener("input", () => {
+    if (rememberMeCheckbox.checked) {
+        localStorage.setItem("savedUsername", usernameInput.value);
+    }
+});
