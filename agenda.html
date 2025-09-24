@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agenda | GEOCODE Programmer</title>
     <link rel="icon" type="image/png" href="logo.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="agendastyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -34,7 +34,9 @@
         <a href="faq.html">FAQ</a>
         <a href="contato.html">Contato</a>
     </nav>
+
     <div class="container agenda-page-center">
+        <!-- Seção de Horários de Aulas -->
         <section id="agenda">
             <h1>Horários de Aulas</h1>
             <h2>Período: Agosto a Outubro de 2025</h2>
@@ -71,11 +73,55 @@
                 </table>
             </div>
         </section>
+
+        <!-- Nova Seção: Controle de Alunos -->
+        <section id="controle-alunos" style="margin-top: 3rem;">
+            <h1>Controle de Alunos</h1>
+            <h2>Lista de acompanhamento de presença e cursos</h2>
+            <div class="work-item agenda-center-wrapper" style="overflow-x:auto;">
+                <table class="agenda-table">
+                    <thead>
+                        <tr>
+                            <th>Nome dos Alunos</th>
+                            <th>Turma Atual</th>
+                            <th>Aulas Presentes</th>
+                            <th>Aulas Ausentes</th>
+                            <th>Cursos Finalizados</th>
+                            <th>Cursos Restantes</th>
+                            <th>Prazo para Término</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>João Silva</td>
+                            <td>Turma A</td>
+                            <td>20</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>30/11/2025</td>
+                        </tr>
+                        <tr>
+                            <td>Maria Oliveira</td>
+                            <td>Turma B</td>
+                            <td>18</td>
+                            <td>5</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>15/12/2025</td>
+                        </tr>
+                        <!-- Adicione mais linhas conforme necessário -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </div>
+
     <footer>
         <p>&copy; 2025 Geovani Santos. Todos os direitos reservados.</p>
         <p>Desenvolvido por <a href="https://instagram.com/geovanikeeper">Geovani Santos</a></p>
     </footer>
+
     <script src="app.js"></script>
     <script>
     // Menu lateral independente
