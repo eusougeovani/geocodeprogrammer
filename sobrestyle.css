@@ -65,42 +65,40 @@ header h1.tech-title {
   position: fixed;
   top: 0;
   left: -260px;
-  width: 240px;
+  width: 250px;
   height: 100%;
-  background: #13294b;
+  background: #0f2a44;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
-  transition: left 0.3s ease;
-  z-index: 1100;
+  transition: 0.3s;
+  z-index: 1001;
 }
 
 .side-menu.open {
   left: 0;
 }
 
-.side-menu a {
-  padding: 14px 20px;
+.side-menu button {
+  background: none;
+  border: none;
+  font-size: 2rem;
   color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.2s;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.side-menu a {
+  color: #fff;
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  transition: color 0.3s;
 }
 
 .side-menu a:hover,
 .side-menu a.active {
-  background: rgba(79, 224, 198, 0.2);
-  color: #4fe0c6;
-}
-
-#close-menu {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
+  color: #00d4ff;
 }
 
 /* ==================== */
@@ -108,26 +106,27 @@ header h1.tech-title {
 /* ==================== */
 .social-sidebar {
   position: fixed;
-  top: 40%;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  background: #13294b;
-  padding: 10px 8px;
-  border-radius: 0 6px 6px 0;
-  z-index: 1200;
+  background: #0f2a44;
+  padding: 0.5rem;
+  border-radius: 0 8px 8px 0;
+  z-index: 1000;
 }
 
 .social-sidebar a {
-  color: #4fe0c6;
-  font-size: 20px;
-  transition: transform 0.2s, color 0.3s;
+  color: #00d4ff;
+  font-size: 1.4rem;
+  margin: 8px 0;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .social-sidebar a:hover {
+  color: #1affc9;
   transform: scale(1.2);
-  color: #fff;
 }
 
 /* ==================== */

@@ -34,16 +34,16 @@ i {
   display: flex;
   flex-direction: column;
   background: #0f2a44;
-  padding: 0.6rem;
+  padding: 0.5rem;
   border-radius: 0 8px 8px 0;
   z-index: 1000;
 }
 
 .social-sidebar a {
   color: #00d4ff;
-  font-size: 1.3rem;
-  margin: 10px 0;
-  transition: 0.3s;
+  font-size: 1.4rem;
+  margin: 8px 0;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .social-sidebar a:hover {
