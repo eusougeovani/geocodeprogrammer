@@ -148,7 +148,6 @@ header h1.tech-title {
 .agenda-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px;
   background: #15263f;
   border-radius: 8px;
   overflow: hidden;
@@ -160,6 +159,7 @@ header h1.tech-title {
   padding: 0.8rem;
   text-align: center;
   font-size: 0.95rem;
+  word-break: break-word;
 }
 
 .agenda-table th {
@@ -194,6 +194,7 @@ footer a {
 /* ===== RESPONSIVIDADE ===== */
 .agenda-center-wrapper {
   width: 100%;
+  max-width: 100vw;
   overflow-x: auto;
 }
 
@@ -208,8 +209,10 @@ footer a {
     font-size: 1rem;
   }
 
-  .agenda-table {
-    min-width: 500px;
+  .agenda-table th,
+  .agenda-table td {
+    font-size: 0.85rem;
+    padding: 0.6rem;
   }
 }
 
@@ -224,12 +227,22 @@ footer a {
     font-size: 0.9rem;
   }
 
-  .agenda-table {
-    font-size: 0.8rem;
-    min-width: 400px;
+  .agenda-table th,
+  .agenda-table td {
+    font-size: 0.75rem;
+    padding: 0.4rem;
   }
 
   #menu-toggle {
     font-size: 1.5rem;
+  }
+}
+
+/* Extra: para telas muito pequenas */
+@media (max-width: 360px) {
+  .agenda-table th,
+  .agenda-table td {
+    font-size: 0.65rem;
+    padding: 0.3rem;
   }
 }

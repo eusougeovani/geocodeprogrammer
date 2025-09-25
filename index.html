@@ -41,7 +41,7 @@
     <div class="container">
         <section id="carousel-section">
             <div class="carousel">
-                <div class="carousel-track">
+                <div class="carousel-track" id="carousel-track">
                     <a href="sobre.html" target="_blank"><img src="inicial/inicial (1).png" alt="Imagem 1"></a>
                     <a href="cursos.html" target="_blank"><img src="inicial/inicial (2).png" alt="Imagem 2"></a>
                     <a href="noticias.html" target="_blank"><img src="inicial/inicial (3).png" alt="Imagem 3"></a>
@@ -114,6 +114,48 @@
                 }
             });
         }
+
+        // Carrossel: exibe uma imagem por vez
+        var carouselTrack = document.getElementById('carousel-track');
+        var carouselItems = carouselTrack ? Array.from(carouselTrack.children) : [];
+        var leftBtn = document.querySelector('.carousel-btn.left');
+        var rightBtn = document.querySelector('.carousel-btn.right');
+        var indicators = document.querySelector('.carousel-indicators');
+        var currentIndex = 0;
+
+        function updateCarousel() {
+            if (!carouselItems.length) return;
+            var itemWidth = carouselItems[0].offsetWidth;
+            carouselTrack.style.transform = 'translateX(' + (-currentIndex * itemWidth) + 'px)';
+            // Atualiza indicadores
+            if (indicators) {
+                indicators.innerHTML = '';
+                carouselItems.forEach(function(_, i) {
+                    var dot = document.createElement('div');
+                    if (i === currentIndex) dot.classList.add('active');
+                    dot.onclick = function() {
+                        currentIndex = i;
+                        updateCarousel();
+                    };
+                    indicators.appendChild(dot);
+                });
+            }
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            updateCarousel();
+        }
+        function showNext() {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            updateCarousel();
+        }
+
+        if (leftBtn) leftBtn.onclick = showPrev;
+        if (rightBtn) rightBtn.onclick = showNext;
+
+        window.addEventListener('resize', updateCarousel);
+        updateCarousel();
     });
     </script>
 </body>
