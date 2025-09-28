@@ -4,7 +4,8 @@ const users = [
     { usuario: "george171", senha: "5167rnzx", redirect: "lg-george171.html" },
     { usuario: "marialeticia", senha: "Maracujabom", redirect: "lg-marialeticia.html" },
     { usuario: "gabrielxy75", senha: "obgs007", redirect: "lg-gabrielxy75.html" },
-    { usuario: "gust07", senha: "Rlkbr126", redirect: "lg-gust07.html" }
+    { usuario: "gust07", senha: "Rlkbr126", redirect: "lg-gust07.html" },
+    { usuario: "giovannanovaes", senha: "vascodagama", redirect: "lg-giovannanovaes.html" }
 ];
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {
