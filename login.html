@@ -73,41 +73,8 @@
         <p>&copy; 2025 Geovani Santos. Todos os direitos reservados.</p>
         <p>Desenvolvido por <a href="https://instagram.com/geovanikeeper">Geovani Santos</a></p>
     </footer>
-    <script src="app.js"></script>
+    <script src="menu.js"></script>
     <script src="login.js"></script>
-    <script>
-        // Mostrar senha
-        function mostrarSenhaFunc() {
-            var senhaInput = document.getElementById("senha");
-            senhaInput.type = senhaInput.type === "password" ? "text" : "password";
-        }
-        // Menu lateral independente e responsivo
-        document.addEventListener('DOMContentLoaded', function () {
-            var menuToggle = document.getElementById('menu-toggle');
-            var sideMenu = document.getElementById('side-menu');
-            var closeMenu = document.getElementById('close-menu');
-            if (menuToggle && sideMenu && closeMenu) {
-                menuToggle.onclick = function () {
-                    sideMenu.classList.add('open');
-                    menuToggle.setAttribute('aria-expanded', 'true');
-                };
-                closeMenu.onclick = function () {
-                    sideMenu.classList.remove('open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                };
-                document.addEventListener('click', function (e) {
-                    if (
-                        sideMenu.classList.contains('open') &&
-                        !sideMenu.contains(e.target) &&
-                        e.target !== menuToggle
-                    ) {
-                        sideMenu.classList.remove('open');
-                        menuToggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>

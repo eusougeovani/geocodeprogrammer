@@ -87,77 +87,8 @@
         <p>&copy; 2025 Geovani Santos. Todos os direitos reservados.</p>
         <p>Desenvolvido por <a href="https://instagram.com/geovanikeeper">Geovani Santos</a></p>
     </footer>
-    <script src="app.js"></script>
-    <script>
-    // Menu lateral independente e responsivo
-    document.addEventListener('DOMContentLoaded', function () {
-        var menuToggle = document.getElementById('menu-toggle');
-        var sideMenu = document.getElementById('side-menu');
-        var closeMenu = document.getElementById('close-menu');
-        if (menuToggle && sideMenu && closeMenu) {
-            menuToggle.onclick = function () {
-                sideMenu.classList.add('open');
-                menuToggle.setAttribute('aria-expanded', 'true');
-            };
-            closeMenu.onclick = function () {
-                sideMenu.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            };
-            document.addEventListener('click', function (e) {
-                if (
-                    sideMenu.classList.contains('open') &&
-                    !sideMenu.contains(e.target) &&
-                    e.target !== menuToggle
-                ) {
-                    sideMenu.classList.remove('open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                }
-            });
-        }
-
-        // Carrossel: exibe uma imagem por vez
-        var carouselTrack = document.getElementById('carousel-track');
-        var carouselItems = carouselTrack ? Array.from(carouselTrack.children) : [];
-        var leftBtn = document.querySelector('.carousel-btn.left');
-        var rightBtn = document.querySelector('.carousel-btn.right');
-        var indicators = document.querySelector('.carousel-indicators');
-        var currentIndex = 0;
-
-        function updateCarousel() {
-            if (!carouselItems.length) return;
-            var itemWidth = carouselItems[0].offsetWidth;
-            carouselTrack.style.transform = 'translateX(' + (-currentIndex * itemWidth) + 'px)';
-            // Atualiza indicadores
-            if (indicators) {
-                indicators.innerHTML = '';
-                carouselItems.forEach(function(_, i) {
-                    var dot = document.createElement('div');
-                    if (i === currentIndex) dot.classList.add('active');
-                    dot.onclick = function() {
-                        currentIndex = i;
-                        updateCarousel();
-                    };
-                    indicators.appendChild(dot);
-                });
-            }
-        }
-
-        function showPrev() {
-            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-            updateCarousel();
-        }
-        function showNext() {
-            currentIndex = (currentIndex + 1) % carouselItems.length;
-            updateCarousel();
-        }
-
-        if (leftBtn) leftBtn.onclick = showPrev;
-        if (rightBtn) rightBtn.onclick = showNext;
-
-        window.addEventListener('resize', updateCarousel);
-        updateCarousel();
-    });
-    </script>
+    <script src="menu.js"></script>
+    <script src="carrossel.js"></script>
 </body>
 
 </html>
