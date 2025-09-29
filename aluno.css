@@ -124,6 +124,37 @@ body {
   color: #64ffda;
 }
 
+/* ===== AGENDA DE HORÁRIOS ===== */
+.card .tabela {
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(100, 255, 218, 0.08);
+}
+
+.card .tabela th,
+.card .tabela td {
+  background: #0f253a;
+  color: #e0e0e0;
+  border: 1px solid #233554;
+}
+
+.card .tabela th {
+  background: #233554;
+  color: #64ffda;
+  font-size: 1.05rem;
+}
+
+.card .tabela tr:nth-child(even) td {
+  background: #13294b;
+}
+
+.card .tabela tr:hover td {
+  background: #1a3a5d;
+  color: #64ffda;
+  transition: background 0.2s;
+}
+
 /* ===== LISTA ===== */
 .lista {
   list-style: none;
@@ -200,12 +231,18 @@ body {
 }
 
 /* ===== FOOTER ===== */
-.footer {
+footer {
+  background: #0b223f;
   text-align: center;
-  padding: 1rem;
-  background: #112240;
-  margin-top: 2rem;
-  font-size: 0.9rem;
+  padding: 12px 8px;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 25px;
+}
+
+footer a {
+  color: #64ffda;
+  font-weight: bold;
 }
 
 /* ===== RESPONSIVIDADE ===== */
