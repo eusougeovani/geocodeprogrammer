@@ -5,7 +5,10 @@ const users = [
     { usuario: "marialeticia", senha: "Maracujabom", redirect: "lg-marialeticia.html" },
     { usuario: "gabrielxy75", senha: "obgs007", redirect: "lg-gabrielxy75.html" },
     { usuario: "gust07", senha: "Rlkbr126", redirect: "lg-gust07.html" },
-    { usuario: "giovannanovaes", senha: "vascodagama", redirect: "lg-giovannanovaes.html" }
+    { usuario: "giovannanovaes", senha: "vascodagama", redirect: "lg-giovannanovaes.html" },
+    { usuario: "roberts", senha: "26082011", redirect: "lg-roberts.html" },
+    { usuario: "caua", senha: "Caua123", redirect: "lg-caua.html" },
+    { usuario: "annebeatrizsilvadacosta", senha: "bia18", redirect: "lg-annebeatrizsilvadacosta.html" }
 ];
 
 document.getElementById("loginForm").addEventListener("submit", function (e) {

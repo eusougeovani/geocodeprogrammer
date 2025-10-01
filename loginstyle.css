@@ -221,6 +221,30 @@ form h1 {
   font-weight: bold;
 }
 
+/* Botões lado a lado para registro/esqueci senha */
+.register-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.register-buttons button {
+  background: #4fe0c6;
+  color: #13294b;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.register-buttons button:hover {
+  background: #00d4ff;
+  color: #0a1b33;
+}
+
 /* ==================== */
 /* FOOTER               */
 /* ==================== */
