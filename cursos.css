@@ -1,4 +1,6 @@
-/* === RESET E BASE === */
+/* ==================== */
+/* RESET E BASE GERAL   */
+/* ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,13 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0a1a2a;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #0a1b33;
   color: #fff;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -24,35 +29,41 @@ img {
 }
 
 
-/* === HEADER === */
+/* ==================== */
+/* HEADER               */
+/* ==================== */
 header {
-  background: #0f2a44;
-  padding: 1rem;
+  background: #0b223f;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 14px 20px;
   position: sticky;
   top: 0;
-  z-index: 900;
+  z-index: 1000;
 }
 
-header h1 {
-  color: #4ce0ff;
-  font-size: 2rem;
+header h1.tech-title {
+  font-size: 1.4rem;
   font-weight: bold;
+  color: #4fe0c6;
+  text-align: center;
+  flex: 1;
 }
 
 #menu-toggle {
-  position: absolute;
-  left: 1rem;
-  font-size: 1.8rem;
+  font-size: 26px;
   background: none;
   border: none;
-  color: #4ce0ff;
+  color: #4fe0c6;
   cursor: pointer;
+  position: absolute;
+  left: 20px;
 }
 
-/* === MENU LATERAL === */
+/* ==================== */
+/* MENU LATERAL         */
+/* ==================== */
 .side-menu {
   position: fixed;
   top: 0;
