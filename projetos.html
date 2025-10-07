@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projetos - Plano de Aula</title>
     <link rel="icon" type="image/png" href="icon_geocode.png">
-    <link rel="stylesheet" href="cursostyle.css">
+    <link rel="stylesheet" href="projetos.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -22,27 +22,182 @@
         <button id="close-menu" aria-label="Fechar menu">&times;</button>
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre Mim</a>
-        <a href="cursos.html" class="active">Cursos</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="contato.html">Contato</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="projetos.html" class="active">Projetos</a>
         <a href="politica-privacidade.html">Política de Privacidade</a>
     </nav>
     <div class="container">
+        <!-- Design -->
         <section>
-            <h1>Página em Atualização</h1>
-            <p>Estou atualizando esta página. Em breve, você encontrará aqui uma lista dos meus projetos mais recentes e interessantes. Fique atento!</p>
+            <h2 class="section-title">Design</h2>
+            <div class="carrossel" id="carrossel-design">
+                <div class="carrossel-cards">
+                    <div class="carrossel-card">
+                        <img src="projetos/concursometro.png" alt="Imagem do Projeto Design 1">
+                        <div class="card-info">
+                            <h3>Concursômetro</h3>
+                            <p>Dashboard visual para acompanhamento de concursos, com design intuitivo e moderno para facilitar sua jornada de estudos.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="projetos/estoque.png" alt="Imagem do Projeto Design 2">
+                        <div class="card-info">
+                            <h3>Gestão de Estoque</h3>
+                            <p>Sistema completo para controle de estoque, com relatórios detalhados e alertas de reposição.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Jogos -->
+        <section>
+            <h2 class="section-title">Jogos</h2>
+            <div class="carrossel" id="carrossel-jogos">
+                <div class="carrossel-cards">
+                    <div class="carrossel-card">
+                        <img src="projetos/financas.png" alt="Imagem do Projeto Jogo 1">
+                        <div class="card-info">
+                            <h3>Bolsa Família - O Jogo</h3>
+                            <p>Simulador de gestão financeira inspirado no programa Bolsa Família, para aprender brincando.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="projetos/holerite.png" alt="Imagem do Projeto Jogo 2">
+                        <div class="card-info">
+                            <h3>Holerite Fácil</h3>
+                            <p>Aprenda sobre contracheques e descontos trabalhistas de forma interativa e divertida.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Páginas WEB -->
+        <section>
+            <h2 class="section-title">Páginas WEB</h2>
+            <div class="carrossel" id="carrossel-web">
+                <div class="carrossel-cards">
+                    <div class="carrossel-card">
+                        <img src="projetos/processos.png" alt="Imagem do Projeto Web 1">
+                        <div class="card-info">
+                            <h3>Processos Seletivos</h3>
+                            <p>Plataforma para divulgação e inscrição em processos seletivos, com painel administrativo para gerenciadores.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="projetos/concursometro.png" alt="Imagem do Projeto Web 2">
+                        <div class="card-info">
+                            <h3>Concursômetro - Versão Web</h3>
+                            <p>Acompanhe seus estudos para concursos públicos com gráficos e estatísticas em tempo real.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Informática -->
+        <section>
+            <h2 class="section-title">Informática</h2>
+            <div class="carrossel" id="carrossel-informatica">
+                <div class="carrossel-cards">
+                    <div class="carrossel-card">
+                        <img src="projetos/estoque.png" alt="Imagem do Projeto Informática 1">
+                        <div class="card-info">
+                            <h3>Controle de Estoque</h3>
+                            <p>Aplicativo para gestão de estoque com alertas de produtos acabando e relatórios de vendas.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="projetos/financas.png" alt="Imagem do Projeto Informática 2">
+                        <div class="card-info">
+                            <h3>Simulador de Finanças</h3>
+                            <p>Ferramenta para simular e planejar suas finanças pessoais, com gráficos e dicas de economia.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pacote Office -->
+        <section>
+            <h2 class="section-title">Pacote Office</h2>
+            <div class="carrossel" id="carrossel-office">
+                <div class="carrossel-cards">
+                    <div class="carrossel-card">
+                        <img src="projetos/holerite.png" alt="Imagem do Projeto Office 1">
+                        <div class="card-info">
+                            <h3>Holerite Interativo</h3>
+                            <p>Entenda todos os detalhes do seu holerite com um simulador interativo e didático.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrossel-card">
+                        <img src="projetos/processos.png" alt="Imagem do Projeto Office 2">
+                        <div class="card-info">
+                            <h3>Processos Seletivos - Painel do Gestor</h3>
+                            <p>Gerencie processos seletivos com facilidade, visualizando candidatos e etapas do processo.</p>
+                            <a href="#" target="_blank">Ver Projeto</a>
+                            <div class="carrossel-controls">
+                                <button class="carrossel-btn prev" aria-label="Anterior">&#10094;</button>
+                                <button class="carrossel-btn next" aria-label="Próximo">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
-                <h3>Contate-nos</h3>
+                <h3>Contatos</h3>
                 <p><i class="fa-solid fa-envelope"></i> <a
                         href="mailto:geocodeprogrammer@gmail.com">geocodeprogrammer@gmail.com</a></p>
                 <p><i class="fa-solid fa-phone"></i> +55 (79) 98866-3905</p>
             </div>
             <div class="footer-column">
-                <h3>Siga nas redes</h3>
+                <h3>Redes Sociais</h3>
                 <div class="social-icons">
                     <a href="https://wa.me/+5579988663905" target="_blank" aria-label="WhatsApp"><i
                             class="fa-brands fa-whatsapp"></i></a>
@@ -65,6 +220,7 @@
         </div>
     </footer>
     <script src="menu.js"></script>
+    <script src="projetos.js"></script>
 </body>
 
 </html>
