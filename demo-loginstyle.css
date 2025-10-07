@@ -41,7 +41,7 @@ header {
 }
 
 header h1.tech-title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #4fe0c6;
   text-align: center;
@@ -103,95 +103,119 @@ header h1.tech-title {
 
 
 /* ==================== */
-/* CONTEÚDO PRINCIPAL   */
+/* LOGIN WRAPPER        */
 /* ==================== */
-.container {
+.wrapper {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
-.about-section {
-  margin-bottom: 40px;
-}
-
-.about-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
+form {
   background: #13294b;
-  padding: 25px;
+  padding: 30px 25px;
   border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.4);
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.about-photo {
-  flex-shrink: 0;
-}
-
-.profile-photo {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #4fe0c6;
-}
-
-.about-description {
-  flex: 1;
-  text-align: left;
-}
-
-.about-description h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #4fe0c6;
-}
-
-.about-description h3 {
-  margin-top: 18px;
-  font-size: 1.2rem;
-  color: #4fe0c6;
-}
-
-.about-description ul {
-  margin-top: 8px;
-  padding-left: 18px;
-}
-
-.about-description ul li {
-  margin-bottom: 6px;
-  list-style: disc;
-}
-
-/* ==================== */
-/* GALERIA              */
-/* ==================== */
-#about-gallery h2 {
-  margin-bottom: 16px;
-  color: #4fe0c6;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 380px;
   text-align: center;
 }
 
-.about-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 14px;
-  max-width: 1100px;
-  margin: 0 auto;
+form h1 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-.gallery-photo {
+.input-box {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-box input {
   width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.4);
-  transition: transform 0.3s;
+  padding: 12px 40px 12px 14px;
+  border: none;
+  border-radius: 25px;
+  background: #0b223f;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
 }
 
-.gallery-photo:hover {
-  transform: scale(1.05);
+.input-box i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 18px;
+}
+
+.show-password {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+  color: #4fe0c6;
+}
+
+.show-password input {
+  margin-right: 5px;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e6e6e6;
+}
+
+.register-link {
+  margin-top: 18px;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #4fe0c6;
+  font-weight: bold;
+}
+
+/* Botões lado a lado para registro/esqueci senha */
+.register-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.register-buttons button {
+  background: #4fe0c6;
+  color: #13294b;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.register-buttons button:hover {
+  background: #00d4ff;
+  color: #0a1b33;
 }
 
 
@@ -200,32 +224,33 @@ header h1.tech-title {
 /* ==================== */
 
 /* Tablets */
-@media (min-width: 768px) {
-  .about-flex {
-    flex-direction: row;
-    align-items: flex-start;
+@media (min-width: 600px) {
+  form {
+    padding: 40px 30px;
+    max-width: 420px;
   }
 
-  .about-description {
-    text-align: justify;
+  form h1 {
+    font-size: 1.6rem;
   }
 
-  .about-description h2 {
-    font-size: 1.7rem;
+  .btn {
+    font-size: 1.05rem;
   }
 }
 
 /* Desktops */
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   header h1.tech-title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
-  .about-description h2 {
-    font-size: 1.9rem;
+  form {
+    max-width: 450px;
+    padding: 45px 35px;
   }
 
-  .about-description h3 {
-    font-size: 1.3rem;
+  form h1 {
+    font-size: 1.8rem;
   }
 }

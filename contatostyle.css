@@ -25,32 +25,6 @@ i {
   pointer-events: none;
 }
 
-/* ===== SOCIAL SIDEBAR ===== */
-.social-sidebar {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  background: #0f2a44;
-  padding: 0.5rem;
-  border-radius: 0 8px 8px 0;
-  z-index: 1000;
-}
-
-.social-sidebar a {
-  color: #00d4ff;
-  font-size: 1.4rem;
-  margin: 8px 0;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.social-sidebar a:hover {
-  color: #1affc9;
-  transform: scale(1.2);
-}
-
 /* ===== HEADER ===== */
 header {
   background: #0f2a44;
@@ -185,21 +159,6 @@ header h1.tech-title {
   transform: translateY(-2px);
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background: #0f2a44;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-top: auto;
-}
-
-footer a {
-  color: #1affc9;
-  font-weight: bold;
-}
-
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
   #contact h1 {
@@ -233,21 +192,6 @@ footer a {
 form button:hover {
   background: #1affc9;
   transform: translateY(-2px);
-}
-
-/* ===== FOOTER ===== */
-footer {
-  background: #0f2a44;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-top: auto;
-}
-
-footer a {
-  color: #1affc9;
-  font-weight: bold;
 }
 
 /* ===== RESPONSIVIDADE ===== */

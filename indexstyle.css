@@ -109,34 +109,6 @@ header h1.tech-title {
 }
 
 /* ==================== */
-/* SOCIAL SIDEBAR       */
-/* ==================== */
-.social-sidebar {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  background: #0f2a44;
-  padding: 0.5rem;
-  border-radius: 0 8px 8px 0;
-  z-index: 1000;
-}
-
-.social-sidebar a {
-  color: #00d4ff;
-  font-size: 1.4rem;
-  margin: 8px 0;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.social-sidebar a:hover {
-  color: #1affc9;
-  transform: scale(1.2);
-}
-
-/* ==================== */
 /* CARROSSEL            */
 /* ==================== */
 .carousel {
@@ -240,23 +212,6 @@ header h1.tech-title {
 
 .work-item strong {
   color: #4fe0c6;
-}
-
-/* ==================== */
-/* FOOTER               */
-/* ==================== */
-footer {
-  background: #0b223f;
-  text-align: center;
-  padding: 12px 8px;
-  font-size: 0.85rem;
-  color: #aaa;
-  margin-top: 25px;
-}
-
-footer a {
-  color: #4fe0c6;
-  font-weight: bold;
 }
 
 /* ==================== */
