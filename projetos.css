@@ -234,6 +234,17 @@ section h1 {
   box-shadow: 0 4px 16px #00d4ff55;
 }
 
+/* Informativo do solicitante */
+.solicitante {
+  display: block;
+  font-size: 1rem;
+  color: #4fe0c6;
+  margin-bottom: 0.6rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
 /* Botões do carrossel dentro do card */
 .carrossel-controls {
   position: absolute;
