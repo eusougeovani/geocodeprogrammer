@@ -1,0 +1,287 @@
+/* ==================== */
+/* RESET E BASE GERAL   */
+/* ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==================== */
+/* HEADER               */
+/* ==================== */
+header {
+  background: #0b223f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1.tech-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4fe0c6;
+  text-align: center;
+  flex: 1;
+}
+
+#menu-toggle {
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #4fe0c6;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+/* ==================== */
+/* MENU LATERAL         */
+/* ==================== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background: #0f2a44;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  z-index: 1001;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  align-self: flex-end;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.side-menu a {
+  color: #fff;
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.side-menu a:hover,
+.side-menu a.active {
+  color: #00d4ff;
+}
+
+/* ==================== */
+/* BOTÕES PADRÃO        */
+/* ==================== */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  background: #4fe0c6;
+  color: #13294b;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background: #00d4ff;
+  color: #0a1b33;
+}
+
+/* ==================== */
+/* FOOTER               */
+/* ==================== */
+footer {
+  background: #002b45;
+  color: #ccc;
+  padding: 3rem 2rem 1rem;
+  font-size: 0.9rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+}
+
+.footer-column h3 {
+  color: #fff;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.footer-column p {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.footer-column a {
+  color: #00d6b2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #1affc9;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00d6b2;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1b3b55;
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.footer-bottom a {
+  color: #1affc9;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #00d6b2;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 600px) {
+  footer {
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* ==================== */
+/* RESPONSIVIDADE       */
+/* ==================== */
+@media (min-width: 600px) {
+  header h1.tech-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  header h1.tech-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* ==================== */
+/* PÁGINA 404           */
+/* ==================== */
+.error-page {
+    background: #0b223f;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.error-content h1 {
+    font-size: 8rem;
+    color: #4fe0c6;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.error-content h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.error-content p {
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #4fe0c6;
+    color: #4fe0c6;
+}
+
+.btn-outline:hover {
+    background: #4fe0c6;
+    color: #13294b;
+}
+
+@media (max-width: 600px) {
+    .error-content h1 {
+        font-size: 6rem;
+    }
+    
+    .error-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .error-actions {
+        flex-direction: column;
+    }
+}

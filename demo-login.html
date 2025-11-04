@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GEOCODE Programmer</title>
+    <title>Login | GEOCODE Programmer</title>
     <link rel="icon" type="image/png" href="icon_geocode.png">
     <link rel="stylesheet" href="demo-loginstyle.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -18,6 +18,7 @@
         </button>
         <h1 class="tech-title">Login do Usuário</h1>
     </header>
+    
     <nav id="side-menu" class="side-menu" aria-label="Menu lateral">
         <button id="close-menu" aria-label="Fechar menu">&times;</button>
         <a href="index.html">Início</a>
@@ -26,19 +27,23 @@
         <a href="projetos.html">Projetos</a>
         <a href="politica-privacidade.html">Política de Privacidade</a>
     </nav>
+    
     <main>
         <div class="wrapper">
             <form id="loginForm" autocomplete="on">
                 <h1>Login</h1>
+                
                 <div class="input-box">
-                    <input type="text" name="usuario" placeholder="Nome de Usuário" required autocomplete="username">
+                    <input type="email" name="usuario" placeholder="Email" required autocomplete="email">
                     <i class="fa fa-user"></i>
                 </div>
+                
                 <div class="input-box">
                     <input type="password" name="senha" id="senha" placeholder="Senha" required
                         autocomplete="current-password">
                     <i class="fa fa-lock"></i>
                 </div>
+                
                 <div class="show-password">
                     <label for="mostrarSenha">
                         <input type="checkbox" id="mostrarSenha" onclick="mostrarSenhaFunc()"> Mostrar senha
@@ -47,16 +52,21 @@
                         <input type="checkbox" id="rememberMe"> Lembrar-me
                     </label>
                 </div>
+                
                 <button type="submit" class="btn">Entrar</button>
+                
                 <div class="register-link">
                     <div class="register-buttons">
-                        <button type="button" onclick="window.open('https://forms.gle/r6ByLrerCbTuHyW77','_blank')">Crie sua Conta</button>
-                        <button type="button" onclick="window.open('https://wa.me/5579988663905?text=Esqueci%20minha%20senha.','_blank')">Esqueci a Senha</button>
+                        <button onclick="window.location.href='criar-conta.html'"> Crie sua Conta </button>
+                        <button type="button" onclick="window.location.href='recuperar-senha.html'">
+                            Esqueci a Senha
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
     </main>
+    
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
@@ -88,6 +98,12 @@
             <p>Desenvolvido por GEOCODE Programmer</p>
         </div>
     </footer>
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    
+    <!-- Seus scripts -->
     <script src="menu.js"></script>
     <script src="demo-login.js"></script>
 </body>
