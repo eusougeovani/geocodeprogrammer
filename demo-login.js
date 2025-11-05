@@ -1,16 +1,3 @@
-/**const users = [
-    { usuario: "aluno", senha: "aluno", redirect: "lg-aluno.html" },
-    { usuario: "agdafranciellesilvasantos", senha: "Schoolagda2026", redirect: "lg-agdafranciellesilvasantos.html" },
-    { usuario: "george171", senha: "5167rnzx", redirect: "lg-george171.html" },
-    { usuario: "marialeticia", senha: "Maracujabom", redirect: "lg-marialeticia.html" },
-    { usuario: "gabrielxy75", senha: "obgs007", redirect: "lg-gabrielxy75.html" },
-    { usuario: "gust07", senha: "Rlkbr126", redirect: "lg-gust07.html" },
-    { usuario: "giovannanovaes", senha: "vascodagama", redirect: "lg-giovannanovaes.html" },
-    { usuario: "roberts", senha: "26082011", redirect: "lg-roberts.html" },
-    { usuario: "caua", senha: "Caua123", redirect: "lg-caua.html" },
-    { usuario: "annebeatrizsilvadacosta", senha: "bia18", redirect: "lg-annebeatrizsilvadacosta.html" }
-];**/
-
 // =========================================
 // CONFIGURAÇÃO DO FIREBASE
 // =========================================
@@ -34,15 +21,17 @@ const auth = firebase.auth();
 // Aqui você define qual página cada usuário acessa após login
 const userPages = {
   "geocodeprogrammer@gmail.com": "lg-aluno.html",
-  "agdafranciellesilvasantos@geocode.com": "lg-agdafranciellesilvasantos.html",
-  "george171@geocode.com": "lg-george171.html",
-  "marialeticia@geocode.com": "lg-marialeticia.html",
-  "gabrielxy75@geocode.com": "lg-gabrielxy75.html",
-  "gust07@geocode.com": "lg-gust07.html",
-  "giovannanovaes@geocode.com": "lg-giovannanovaes.html",
-  "roberts@geocode.com": "lg-roberts.html",
-  "caua@geocode.com": "lg-caua.html",
-  "annebeatrizsilvadacosta@geocode.com": "lg-annebeatrizsilvadacosta.html"
+  "agdafranciele5@gmail.com": "lg-0001.html",
+  "annebeatrizbr00@gmail.com": "lg-0002.html",
+  "antonygabrielgames35@gmail.com": "lg-0003.html",
+  "dafnesantossouza3@gmail.com": "lg-0004.html",
+  "jszin1380@gmail.com": "lg-0005.html",
+  "leticiacaetano198@gmail.com": "lg-0006.html",
+  "nikinme111@gmail.com": "lg-0007.html",
+  "novaesgiovanna30@gmail.com": "lg-0008.html",
+  "riziarizia38@gmail.com": "lg-0009.html",
+  "srobertt792@gmail.com": "lg-0010.html",
+  "suelimarialimaa@gmail.com": "lg-0011.html"
 };
 
 // =========================================
